@@ -1,0 +1,131 @@
+# ExampleWorkshop
+
+## Descrição
+
+ExampleWorkshop é um projeto de exemplo desenvolvido para demonstrar um workshop prático utilizando tecnologias web modernas. Este repositório contém uma aplicação web ASP.NET Core Razor Pages com interface responsiva, ideal para aprendizado e demonstrações de conceitos de desenvolvimento web full-stack.
+
+## Tecnologias e Linguagens
+
+Este projeto utiliza as seguintes tecnologias e linguagens:
+
+- **C# (.NET 8.0)** - ~60% - Backend e lógica de servidor com ASP.NET Core
+- **HTML** - ~20% - Estrutura das páginas Razor
+- **CSS** - ~15% - Estilização com Bootstrap
+- **JavaScript** - ~5% - Interatividade no lado do cliente (jQuery, Bootstrap JS)
+
+### Principais Frameworks e Bibliotecas
+
+- ASP.NET Core 8.0 (Razor Pages)
+- Bootstrap 5
+- jQuery
+- jQuery Validation
+
+## Como Começar
+
+### Pré-requisitos
+
+- [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) ou superior
+- Um navegador web moderno (Chrome, Firefox, Edge, Safari)
+- Git para clonar o repositório
+
+### Passos para Executar Localmente
+
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/Brasftware/ExampleWorkshop.git
+   cd ExampleWorkshop
+   ```
+
+2. **Navegue até o diretório do projeto .NET**
+   ```bash
+   cd src/workshop
+   ```
+
+3. **Restaure as dependências**
+   ```bash
+   dotnet restore
+   ```
+
+4. **Compile o projeto**
+   ```bash
+   dotnet build
+   ```
+
+5. **Execute a aplicação**
+   ```bash
+   dotnet run
+   ```
+
+6. **Acesse no navegador**
+   
+   Após executar, a aplicação estará disponível em:
+   - HTTPS: `https://localhost:5001`
+   - HTTP: `http://localhost:5000`
+   
+   Abra seu navegador e navegue até um desses endereços para visualizar a aplicação.
+
+### Conteúdo HTML/CSS Estático
+
+Os arquivos HTML e CSS estão localizados em:
+- Páginas Razor: `src/workshop/Pages/`
+- Recursos estáticos (CSS, JavaScript, imagens): `src/workshop/wwwroot/`
+
+Para visualizar apenas os arquivos estáticos sem executar o servidor .NET, você pode usar qualquer servidor HTTP estático simples na pasta `wwwroot`.
+
+## Estrutura do Projeto
+
+```
+ExampleWorkshop/
+├── src/
+│   └── workshop/              # Projeto principal ASP.NET Core
+│       ├── Pages/             # Páginas Razor (.cshtml e .cshtml.cs)
+│       │   ├── Shared/        # Layouts e componentes compartilhados
+│       │   ├── Index.cshtml   # Página inicial
+│       │   ├── Contact.cshtml # Página de contato
+│       │   └── Projects.cshtml # Página de projetos
+│       ├── wwwroot/           # Arquivos estáticos (CSS, JS, imagens)
+│       │   └── lib/           # Bibliotecas de terceiros (Bootstrap, jQuery)
+│       ├── Properties/        # Configurações de lançamento
+│       ├── Program.cs         # Ponto de entrada da aplicação
+│       ├── appsettings.json   # Configurações da aplicação
+│       └── workshop.csproj    # Arquivo de projeto .NET
+├── .vscode/                   # Configurações do VS Code
+├── .github/                   # Workflows e configurações do GitHub
+├── workshop.sln               # Arquivo de solução .NET
+└── README.md                  # Este arquivo
+```
+
+## Como Contribuir
+
+Contribuições são bem-vindas! Para contribuir com este projeto:
+
+1. Faça um fork do repositório
+2. Crie uma branch para sua feature (`git checkout -b feature/MinhaNovaFeature`)
+3. Faça commit das suas alterações (`git commit -m 'Adiciona nova feature'`)
+4. Faça push para a branch (`git push origin feature/MinhaNovaFeature`)
+5. Abra um Pull Request descrevendo suas alterações
+
+### Diretrizes
+
+- Mantenha o código limpo e bem documentado
+- Siga as convenções de código do projeto
+- Teste suas alterações antes de enviar o PR
+- Descreva claramente o que foi alterado e por quê
+
+## Licença
+
+Este projeto ainda não possui uma licença definida. É recomendável adicionar uma licença apropriada (como MIT, Apache 2.0, GPL, etc.) no arquivo `LICENSE` na raiz do repositório para definir os termos de uso e distribuição do código.
+
+Para escolher uma licença adequada, visite: [choosealicense.com](https://choosealicense.com/)
+
+## Contato e Suporte
+
+Este projeto é mantido por [Brasftware](https://github.com/Brasftware).
+
+- **Repositório**: [Brasftware/ExampleWorkshop](https://github.com/Brasftware/ExampleWorkshop)
+- **Issues**: Para reportar bugs ou sugerir melhorias, abra uma [issue](https://github.com/Brasftware/ExampleWorkshop/issues)
+- **Discussões**: Use a aba [Discussions](https://github.com/Brasftware/ExampleWorkshop/discussions) para perguntas e discussões gerais
+
+---
+
+**Desenvolvido com ❤️ por Brasftware**
