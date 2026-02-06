@@ -1,0 +1,33 @@
+@page
+@model ProjectsModel
+@{
+    ViewData["Title"] = "Projetos";
+}
+
+<section class="section">
+    <div>
+        <h1 class="section-title">Projetos recentes</h1>
+        <p class="section-lead">
+            Uma selecao de iniciativas B2B com foco em eficiencia operacional, integracoes
+            e novas receitas digitais.
+        </p>
+    </div>
+    <div class="grid-3">
+        @foreach (var project in Model.Projects)
+        {
+            <article class="card">
+                <span class="status @project.StatusCss">@project.Status</span>
+                <h3>@project.Name</h3>
+                <p>@project.Description</p>
+                <p><strong>Cliente:</strong> @project.Client</p>
+                <p><strong>Ano:</strong> @project.Year</p>
+                <div>
+                    @foreach (var tech in project.Technologies)
+                    {
+                        <span class="pill">@tech</span>
+                    }
+                </div>
+            </article>
+        }
+    </div>
+</section>

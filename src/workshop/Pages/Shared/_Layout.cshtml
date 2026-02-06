@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Workshop Dev</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/workshop.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" asp-area="" asp-page="/Index">Workshop Dev</a>
+            <nav class="site-nav" aria-label="Navegacao principal">
+                <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
+                <a class="nav-link" asp-area="" asp-page="/Projects">Projetos</a>
+                <a class="nav-link" asp-area="" asp-page="/Contact">Contato</a>
+            </nav>
+            <div class="nav-cta">
+                <a class="button button-outline" asp-area="" asp-page="/Contact">Falar com o time</a>
+            </div>
+        </div>
+    </header>
+    <div class="page">
+        <main role="main" class="container main">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>Workshop Dev</strong>
+                <p>Produtos digitais B2B, squads sob demanda e engenharia confiavel.</p>
+            </div>
+            <div>
+                <p><strong>Email</strong>: contato@workshop.dev</p>
+                <p><strong>Telefone</strong>: +55 (11) 4040-7070</p>
+            </div>
+        </div>
+        <div class="footer-bottom">&copy; 2026 Workshop Dev. Todos os direitos reservados.</div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,85 @@
+@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<section class="section">
+    <div>
+        <h1 class="section-title">Vamos conversar</h1>
+        <p class="section-lead">
+            Conte o desafio da sua empresa e retornamos com um plano inicial em ate 48 horas.
+        </p>
+    </div>
+
+    @if (Model.IsSubmitted)
+    {
+        <div class="notice">
+            Obrigado! Seu contato foi recebido. Em breve nossa equipe retorna com os proximos passos.
+        </div>
+    }
+
+    <div class="grid-3">
+        <div class="card">
+            <h3>Formas de contato</h3>
+            <div class="contact-list">
+                <div><strong>Email:</strong> contato@workshop.dev</div>
+                <div><strong>Telefone:</strong> +55 (11) 4040-7070</div>
+                <div><strong>Horario:</strong> Seg - Sex, 9h as 18h</div>
+                <div><strong>Local:</strong> Sao Paulo - SP</div>
+            </div>
+        </div>
+        <div class="card" style="grid-column: span 2;">
+            <h3>Fale com a gente</h3>
+            <form method="post">
+                <div asp-validation-summary="ModelOnly"></div>
+                <div class="form-grid">
+                    <div class="form-field">
+                        <label asp-for="Input.Name"></label>
+                        <input asp-for="Input.Name" />
+                        <span asp-validation-for="Input.Name"></span>
+                    </div>
+                    <div class="form-field">
+                        <label asp-for="Input.Email"></label>
+                        <input asp-for="Input.Email" />
+                        <span asp-validation-for="Input.Email"></span>
+                    </div>
+                    <div class="form-field">
+                        <label asp-for="Input.Company"></label>
+                        <input asp-for="Input.Company" />
+                        <span asp-validation-for="Input.Company"></span>
+                    </div>
+                    <div class="form-field">
+                        <label asp-for="Input.Role"></label>
+                        <input asp-for="Input.Role" />
+                        <span asp-validation-for="Input.Role"></span>
+                    </div>
+                    <div class="form-field">
+                        <label asp-for="Input.Phone"></label>
+                        <input asp-for="Input.Phone" />
+                        <span asp-validation-for="Input.Phone"></span>
+                    </div>
+                    <div class="form-field">
+                        <label asp-for="Input.Interest"></label>
+                        <select asp-for="Input.Interest" asp-items="Model.Interests">
+                            <option value="">Selecione</option>
+                        </select>
+                        <span asp-validation-for="Input.Interest"></span>
+                    </div>
+                </div>
+                <div class="form-field" style="margin-top: 1rem;">
+                    <label asp-for="Input.Message"></label>
+                    <textarea asp-for="Input.Message"></textarea>
+                    <span asp-validation-for="Input.Message"></span>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <button class="button" type="submit">Enviar mensagem</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
